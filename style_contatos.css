@@ -1,0 +1,100 @@
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #852f29; /* Fundo vermelho */
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.user-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Duas colunas fixas */
+    gap: 20px;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.user-card {
+    background-color: #ffffff; /* Cor das caixas */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    transition: transform 0.2s;
+}
+
+.user-card:hover {
+    transform: translateY(-5px);
+}
+
+.user-card h2 {
+    margin: 0 0 10px 0;
+    font-size: 20px;
+    color: #333;
+}
+
+.user-card p {
+    margin: 5px 0;
+    color: #555;
+}
+
+.label {
+    font-weight: bold;
+}
+
+/* Estilo para o botão de "Voltar ao Início" */
+.back-to-home {
+    margin-top: 30px;
+    padding: 10px 20px;
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
+}
+
+.back-to-home:hover {
+    background-color: red;
+}
+
+/* Media Queries para Responsividade */
+
+/* Ajuste para telas pequenas (smartphones) */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .user-container {
+        grid-template-columns: 1fr; /* Coluna única em telas pequenas */
+        gap: 15px;
+    }
+
+    .user-card {
+        padding: 15px;
+    }
+
+    .user-card h2 {
+        font-size: 18px; /* Tamanho menor para títulos */
+    }
+
+    .user-card p {
+        font-size: 14px; /* Ajuste no tamanho da fonte */
+    }
+
+    .back-to-home {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+/* Ajustes para telas maiores que 768px (tablets e desktops) */
+@media (min-width: 769px) {
+    .user-container {
+        grid-template-columns: repeat(2, 1fr); /* Duas colunas fixas */
+    }
+}

@@ -1,0 +1,118 @@
+/* Resetando estilos básicos para garantir consistência entre navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo do corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #852f29;
+    color: white;
+     background-repeat: no-repeat;
+    text-align: center;
+}
+
+/* Estilo do cabeçalho */
+header {
+    padding: 20px;
+}
+
+/* Estilo da logo, definindo o tamanho */
+header img {
+    width: 100px;
+    height: auto;
+}
+
+/* Estilo do título */
+h1 {
+    font-size: 2rem;
+    margin-top: 10px;
+}
+
+/* Estilo da seção de regionais */
+h2 {
+    margin-top: 40px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Estilo geral da seção de regionais */
+.regionais {
+    margin-top: 50px;
+}
+
+/* Contêiner para os botões, com fundo branco e arredondado */
+.buttons-container {
+    background-color: white;
+    padding: 30px; /* Aumentei o padding para maior espaço */
+    border-radius: 10px; /* Bordas arredondadas */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas */
+    gap: 34px; /* Espaçamento entre os botões */
+    justify-content: center; /* Centraliza os botões */
+    margin-top: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.9); /* Sombra suave */
+    max-width: 800px; /* Aumentando a largura máxima */
+    margin-left: auto;
+    margin-right: auto; /* Centraliza o contêiner */
+}
+
+/* Estilo de cada botão das regionais */
+.regional-button {
+    padding: 10px 20px; /* Ajustei o padding para botões menores */
+    font-size: 0.9rem; /* Tamanho da fonte reduzido */
+    background-color: red; /* Cor de fundo dos botões */
+    color: white;
+    border: 2px solid #fff; /* Borda branca */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    transition: background-color 0.3s; /* Transição suave para a cor de fundo */
+}
+
+/* Estilo de hover, mudando a cor de fundo ao passar o mouse sobre o botão */
+.regional-button:hover {
+    background-color: #b30000;
+}
+
+/* Responsividade: ajuste para telas menores */
+@media (max-width: 768px) {
+    /* Alterando a grid para 2 colunas em telas menores */
+    .buttons-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas em tablets */
+        gap: 10px; /* Espaçamento reduzido */
+    }
+
+    /* Ajustando o tamanho dos botões em dispositivos móveis */
+    .regional-button {
+        padding: 10px 20px;
+        font-size: 0.9rem; /* Reduzindo o tamanho da fonte */
+    }
+
+    /* Ajustando o tamanho do título */
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    /* Ajustando o contêiner de botões */
+    .buttons-container {
+        padding: 25px; /* Aumentando o espaço do contêiner */
+    }
+}
+
+/* Responsividade para telas muito pequenas (ex. celulares) */
+@media (max-width: 480px) {
+    /* Alterando a grid para 1 coluna em telas muito pequenas */
+    .buttons-container {
+        grid-template-columns: 1fr; /* 1 coluna para telas muito pequenas */
+        gap: 5px; /* Espaçamento bem reduzido */
+    }
+
+    /* Ajustando os botões para ocupar toda a largura */
+    .regional-button {
+        width: 100%; /* Botões ocupando toda a largura da tela */
+        padding: 12px;
+        font-size: 1rem; /* Ajustando o tamanho da fonte */
+    }
+}
